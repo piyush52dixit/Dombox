@@ -1,0 +1,501 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  /* text-align: center; */
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 8rem 38rem 3fr 1.5fr;
+  grid-template-rows: 0.2fr 2fr;
+}
+.navbar {
+  padding: 5.6rem 2.4rem;
+  grid-row: 2/-1;
+  border-right: 1px solid black;
+  background-color: #fff;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.customer-1 {
+  height: 4.8rem;
+  width: 4.8rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transform: translateX(-40%);
+}
+.items {
+  list-style: none;
+}
+.items a {
+  text-decoration: none;
+  color: #343a40;
+}
+.navbar-icon {
+  height: 2.4rem;
+
+  width: 2.4rem;
+  transition: all 0.2s;
+}
+.navbar-compose-icon {
+  height: 2.4rem;
+
+  width: 2.4rem;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 0.3rem;
+  transition: all 0.3s;
+}
+.compose {
+  color: #377dff;
+}
+.navbar-compose-icon:hover {
+  background-color: #dee2e6;
+}
+.navbar-icon:hover {
+  color: #377dff;
+}
+menu {
+  background-color: #377dff;
+  border-bottom: 1px solid black;
+  grid-column: 1/-1;
+}
+/* 
+-------------------
+SECTION MENU 
+----------------------
+*/
+.section-menu {
+  padding: 0 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  width: 18rem;
+  height: auto;
+}
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.4rem;
+  gap: 3.2rem;
+}
+.search {
+  padding: 2.4rem 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #c3d8ff;
+  height: 2rem;
+  width: 50rem;
+  border-radius: 2.4rem;
+}
+.search-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.search-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #343a40;
+}
+input {
+  background-color: #fff;
+  border: none;
+  font-family: inherit;
+  padding: 0.3rem;
+  color: #212529;
+  font-size: 1.6rem;
+}
+::placeholder {
+  color: #13121254;
+}
+.section-mails {
+  /* padding: ; */
+  position: relative;
+  overflow: scroll;
+}
+/* ------------------
+SECTION MAIN
+-------------------------
+*/
+main {
+  /* padding: 1.2rem; */
+  padding-top: 0;
+  overflow: scroll;
+  border-left: 1px solid #000;
+}
+.section-mails h5 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  letter-spacing: 0.09;
+  padding: 1.08rem 1.2rem;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  color: #212529;
+  margin-bottom: 2rem;
+}
+.section-mails p {
+  border-bottom: 1px solid gray;
+  margin: 1.3rem;
+  display: flex;
+  font-size: 1.6rem;
+  /* justify-content: space-between; */
+  gap: 1.2rem;
+  align-items: center;
+  position: relative;
+}
+.section-mails span {
+  font-weight: 600;
+}
+.section-mails em {
+  color: #adb5bd;
+  font-style: normal;
+  font-size: 1rem;
+}
+.unread-icon {
+  color: #377dff;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.three-dots {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* ---------------------------------
+EMAIL VIEW
+----------------------------------------------- */
+.email-view-navbar ul {
+  display: flex;
+
+  gap: 3rem;
+}
+.email-view-navbar ul li {
+  list-style: none;
+}
+.email-icon {
+  height: 2rem;
+  width: 2rem;
+  transition: all 0.2s;
+}
+.email-icon:hover {
+  color: #2928287c;
+}
+.email-icon-dots {
+  position: absolute;
+  top: 1.2rem;
+  right: 0;
+}
+.email-view-navbar {
+  position: relative;
+  border-bottom: 1px solid black;
+  padding: 1.2rem 2.4rem;
+}
+.email-view h2 {
+  display: flex;
+  justify-content: space-between;
+  color: #343a40;
+  padding: 1.2rem 3.6rem;
+}
+.email-view h2 p {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.email-view h2 p em {
+  font-weight: 400;
+  background-color: #f1f3f5;
+  font-style: normal;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.email-view h2 p em:hover {
+  background-color: #c3d8ff;
+}
+.cross-icon {
+  color: #000000;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.header-icons {
+  height: 1.8rem;
+  width: 1.8rem;
+  color: #343a40;
+}
+.header-icons:hover {
+  color: #2928287c;
+}
+.email-view-header {
+  display: flex;
+  gap: 1.8rem;
+}
+.main-email-header {
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 5rem 37rem 1fr;
+}
+.contact-name {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+}
+.unnamed {
+  border-radius: 50%;
+}
+.main-email-header em {
+  font-style: normal;
+  color: #868e96;
+  font-size: 1.2rem;
+}
+.down-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.to-me {
+  transform: translateY(-100%);
+  grid-column: 2/-1;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.dateandtime {
+  grid-column: 3/-1;
+  grid-row: 1/2;
+  justify-self: end;
+  font-size: 1.2rem;
+  color: #868e96;
+}
+.email-content {
+  width: 85%;
+  margin: auto;
+}
+.qoura {
+  width: 10%;
+  height: auto;
+}
+.email-heading-alpha {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 0.3rem;
+  font-size: 1.4rem;
+}
+.email-heading-beta {
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.09rem;
+  line-height: 1.2;
+  color: #343a40;
+}
+.email-heading-beta-2 {
+  font-size: 1.2rem;
+  color: #495057;
+}
+.email-heading-beta-2 p {
+  font-size: 1.6rem;
+  margin: 1.2rem 0;
+}
+.email-heading-beta-2 p a {
+  color: #377dff;
+  font-style: normal;
+  text-decoration: none;
+}
+.email-heading-beta-2 strong {
+  font-weight: 500;
+}
+hr {
+  width: 50%;
+  margin: 3.4rem auto;
+  color: #e9ecef;
+}
+.interaction {
+  display: flex;
+  gap: 1.8rem;
+}
+.icon-inter {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #868e96;
+  transition: all 0.2s;
+}
+.icon-inter:hover {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #2e3032;
+}
+.result {
+  width: 80%;
+  height: auto;
+}
+.read-more {
+  margin: 4.8rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.read-more a {
+  text-decoration: none;
+  background-color: #377dff;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  border-radius: 2.4rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.section-cta {
+  display: flex;
+  justify-content: center;
+}
+.download-cta {
+  background-color: #a8c7fa8f;
+  padding: 3.6rem;
+  margin-bottom: 4.8rem;
+  width: 80%;
+}
+.download-cta p {
+  text-align: center;
+  color: #212529;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.6rem;
+}
+.ios {
+  width: 24%;
+  height: 18%;
+}
+.ps {
+  width: 30%;
+  justify-content: flex-start;
+}
+.section-footer {
+  width: 70%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.email-heading-beta-2 .footer-1 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.email-heading-beta-2 .footer-2 {
+  text-align: center;
+  font-size: 1rem;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.4rem;
+  margin: 4.8rem;
+}
+.btn p a {
+  border: 1px solid #343a40;
+  border-radius: 2rem;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+  color: #343a40;
+}
+.btn a:hover {
+  background-color: #e9ecef;
+}
+/* -----------------------
+SECTION ASIDE
+-------------------------------- */
+aside {
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.aside-img {
+  width: 100%;
+  height: auto;
+}
+.aside-info h1 {
+  padding: 1.2rem;
+  padding-bottom: 0;
+  font-weight: 500;
+  color: #212529;
+}
+.aside-info p {
+  padding: 1.2rem;
+  padding-top: 0;
+  font-weight: 400;
+  color: #4f5256;
+}
+.aside-btn {
+  margin: 2.4rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.aside-btn a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  border: 2px solid #212529;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #212529;
+  font-weight: 500;
+  transition: all 0.4s;
+}
+.aside-btn a:hover:nth-child(1) {
+  background-color: #377dff;
+  transform: translateY(-0.2rem);
+  color: #fff;
+  border: 2px solid #377dff;
+  box-shadow: 0 0 0.1rem 0.1rem #2a28282c;
+}
+.logo-2 {
+  opacity: 0;
+  width: 100%;
+  transition: all ease-in 0.5s;
+}
+.logo-2:hover {
+  opacity: 1;
+}
